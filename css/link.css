@@ -2,6 +2,7 @@
 /** start variables*/
 :root {
   --main_color : #10cab7;
+  --secondary_color : #2c4755;
 }
 
 
@@ -232,7 +233,104 @@ color: var(--main_color);
     padding-top: 60px;
     padding-bottom: 60px;  
   }
+  .services .services_content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+    grid-gap: 30px;
+    margin-top: 100px;
+  }
+  .services .services_content .image  img {
+    width: 300px;
+    height: 400px;
+  }
+  services .services_content .srv {
+    display: flex;
+    margin-bottom: 40px;
+  }
+  @media(max-width: 767px) {
+    services .services_content .srv {
+      flex-direction: column;
+      text-align: center;
+    } 
+  }
+  .services .services_content .srv i {
+    color: var(--main_color);
+    flex-basis: 60px;
+  }
+  .services .services_content .srv .text {
+    flex: 1;
+  }
+  .services .services_content .srv .text h3 {
+    margin: 0 0 20px ;
+  }
+  .services .services_content .srv .text p {
+    color: #333;
+    font-weight: 300;
+    line-height: 1.6;
+  } 
+  .services .services_content  .image {
+    text-align: center;
+    position: relative;
+  }
+  .services .services_content  .image:before {
+    content: '';
+    background-color:var(--secondary_color);
+    width: 100px;
+    height: calc(100% + 80px ); 
+    right: 0;
+    top: -10%;
+    position: absolute;
+    z-index: -1;
+
+  }
+  @media (max-width : 1199px) {
+    .services .services_content  .image {
+      display: none;
+    }  
+  }
 
 
   /*end services section */
   /*end services section */
+
+  /*start portofolio*/
+  /*start portofolio*/
+.portofolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f6f6f6;
+}
+.portofolio .portofolio_content { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+  grid-gap: 30px;  
+  margin-top: 80px;
+
+}
+.portofolio .portofolio_content .card img {
+  max-width: 100%;
+  
+}
+.portofolio .portofolio_content .card {
+  background-color: white;
+
+}
+.portofolio .portofolio_content .card .info {
+  padding: 20px;
+}
+.portofolio .portofolio_content .card .info h3 {
+  margin: 0;
+}
+.portofolio .portofolio_content .card .info p {
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+
+
+
+
+  
+  /*end portofolio*/
+  /*end portofolio*/
